@@ -10,7 +10,13 @@ type testProvider struct {
 }
 
 func TestPrivider(t *testing.T) {
-	_, ok := interface{}(&testProvider{}).(Provider)
+	test := &testProvider{}
+	_, ok := interface{}(test).(Provider)
 
 	assert.True(t, ok)
+
+	assert.NotPanics(t, func() {
+		test.Register()
+		test.Boot()
+	})
 }
