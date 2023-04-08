@@ -2,14 +2,14 @@ package message
 
 type Message interface {
 	GetProtocolVersion() string
-	withProtocolVersion(string) Message
+	withProtocolVersion(version string) Message
 	GetHeaders() map[string][]string
-	HasHeader(string) bool
-	GetHeader(string) []string
-	GetHeaderLine(string) string
-	WithHeader(string, string) Message
-	WithAddedHeader(string, string) Message
-	WithoutHeader(string) Message
+	HasHeader(name string) bool
+	GetHeader(name string) []string
+	GetHeaderLine(name string) string
+	WithHeader(name string, value ...string) Message
+	WithAddedHeader(name string, value ...string) Message
+	WithoutHeader(name string) Message
 	GetBody() Stream
-	WithBody(Stream) Message
+	WithBody(body Stream) Message
 }

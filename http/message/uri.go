@@ -9,12 +9,12 @@ type Uri interface {
 	GetPath() string
 	GetQuery() string
 	GetFragment() string
-	WithScheme(string) Uri
-	WithUserInfo(string, string) Uri
-	WithHost(string) Uri
-	WithPort(int) Uri
-	WithPath(string) Uri
-	WithQuery(string) Uri
-	WithFragment(string) Uri
+	WithScheme(scheme string) Uri
+	WithUserInfo(user string, password ...string) Uri
+	WithHost(host string) Uri
+	WithPort(port int) Uri
+	WithPath(path string) Uri
+	WithQuery(query string) Uri
+	WithFragment(fragment string) Uri
 	String() string
 }
