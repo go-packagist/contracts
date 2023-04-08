@@ -1,5 +1,6 @@
 package provider
 
+// Provider is the interface that wraps the basic Register and Boot methods.
 type Provider interface {
 	// Register is called when the application is registering the provider.
 	Register()
