@@ -123,6 +123,6 @@ func TestLevel_LevelUnmarshal(t *testing.T) {
 	assert.Equal(t, Info, t7.Level)
 	assert.Equal(t, Debug, t8.Level)
 	assert.Error(t, err1)
-	assert.Equal(t, "invalid log level: test", err1.Error())
+	assert.Equal(t, ErrorInvalidLogLevel.Error(), err1.Error())
 	assert.Error(t, err2)
 }

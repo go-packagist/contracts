@@ -47,6 +47,10 @@ const (
 	DebugString = "debug"
 )
 
+var (
+	ErrorInvalidLogLevel = fmt.Errorf("invalid log level")
+)
+
 // Int returns the integer representation of the log level
 func (l Level) Int() int {
 	return int(l)
@@ -117,7 +121,7 @@ func (l *Level) UnmarshalJSON(data []byte) error {
 	case DebugString:
 		*l = Debug
 	default:
-		return fmt.Errorf("invalid log level: %s", s)
+		return ErrorInvalidLogLevel
 	}
 
 	return nil
