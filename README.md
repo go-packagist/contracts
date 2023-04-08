@@ -18,6 +18,12 @@ go get github.com/go-packagist/contracts
 - [`Hasher`](hashing): Hashing interface
 - [`Provider`](provider): Provider interface
 - [`Logger`](logger): Logger interface
+- Support
+  - [`Countable`](support/countable.go): Countable interface
+  - [`Htmlable`](support/htmlable.go): Htmlable interface
+  - [`Jsonable`](support/jsonable.go): Jsonable interface
+  - [`Renderable`](support/renderable.go): Renderable interface
+  - [`Stringable`](support/stringable.go): Stringable interface
 
 ## License
 
