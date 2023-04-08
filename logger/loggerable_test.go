@@ -32,4 +32,13 @@ func TestLoggerable(t *testing.T) {
 	assert.Errorf(t, l.Info("test"), "info: test")
 	assert.Errorf(t, l.Debug("test"), "debug: test")
 	assert.Errorf(t, l.Log(Info, "test"), "info: test")
+
+	assert.Errorf(t, l.Emergencyf("test %s", "test"), "emergency: test test")
+	assert.Errorf(t, l.Alertf("test %s", "test"), "alert: test test")
+	assert.Errorf(t, l.Criticalf("test %s", "test"), "critical: test test")
+	assert.Errorf(t, l.Errorf("test %s", "test"), "error: test test")
+	assert.Errorf(t, l.Warningf("test %s", "test"), "warning: test test")
+	assert.Errorf(t, l.Noticef("test %s", "test"), "notice: test test")
+	assert.Errorf(t, l.Infof("test %s", "test"), "info: test test")
+	assert.Errorf(t, l.Debugf("test %s", "test"), "debug: test test")
 }
