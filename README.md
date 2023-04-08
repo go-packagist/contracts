@@ -15,8 +15,8 @@ go get github.com/go-packagist/contracts
 
 ## List
 
-- `[Hasher](hashing)`: Hashing interface
-- `[Provider](provider)`: Provider interface
+- [`Hasher`](hashing): Hashing interface
+- [`Provider`](provider): Provider interface
 
 ## License
 
