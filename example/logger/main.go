@@ -1,16 +1,3 @@
-# Logger
-
-Logger is a simple logger interface for Go. It is reference on the [PSR-3](https://www.php-fig.org/psr/psr-3/) standard.
-
-## Features
-
-- Simple interface
-- 8 log levels
-- [`stdout_logger.go`](stdout_logger.go) for `StdoutLogger
-
-## Example
-
-```go
 package main
 
 import (
@@ -81,4 +68,3 @@ func main() {
 	// 	[2023-04-09 19:26:45] test.DEBUG: test test
 	// 	[2023-04-09 19:26:45] test.INFO: test
 }
-```
